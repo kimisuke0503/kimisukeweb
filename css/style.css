@@ -12,26 +12,25 @@ body {
 a {
     text-decoration: none;
 }
-img {
-    max-width: 100%;
-}
+
 
 /* ------ヘッダー------ */
-.head-bg {
-    background-image: url(../images/headbg.JPG);
-    background-size: cover;
-    height: 300px;
-}
 .page-header {
+    position: relative;
+    height: 350px;
+    background-image: url(../images/headbg.JPG);
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
 }
 .wrapper {
     max-width: ;
     margin: 0 auto;
-    padding: 0 150px;
+    padding: 0 10%;
 }
 .logo {
+    color: #432;
     margin-top: 40px;
     word-break: break-all;
 }
@@ -54,4 +53,123 @@ img {
 }
 .main-nav a:hover {
     color: #fff;
+}
+
+
+/* ------自己紹介記事------ */
+article {
+    text-align: center;
+}
+#kimisukeimg {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    z-index: 3;
+
+    width: 20vh;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
+}
+.profile {
+    height: 1500px;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    z-index: 2;
+
+    background-color: #fff;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
+    width: 90%;
+    margin: 0px auto 0;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 130px;    
+}
+.profile h1 {
+    color: brown;
+    font-family: "M PLUS Rounded 1c";
+    font-size: 40px;
+}
+
+.profile h2 {
+    font-family: "M PLUS Rounded 1c";
+    font-size: 20px;
+}
+
+.sns-icon {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px;
+}
+
+.sns-icon a {
+    width: 5vh;
+    height: 5vh;
+    
+    border-radius: 50%;
+    margin: 0 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sns-icon img{
+    width: 4vh;
+    height: auto;
+}
+
+.sns-icon a:hover {
+    background-color: #ddd;
+}
+
+.button {
+    margin: auto;
+    background-color: aqua;
+}
+
+/* history */
+.history {
+    margin-top: 50px;
+}
+
+.history h3 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.history li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 550px;
+    margin: 0 auto 2%;
+    padding: 0 2% 1%;
+    border-bottom: 1px #ddd solid;
+}
+
+.history-content .description {
+    flex: auto;
+}
+
+
+/* フッター */
+footer {
+    margin-top: 2000px;
+    width: 100%;
+    padding: 26px;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10% 0;
+}
+
+footer p {
+    word-break: break-all;
+    font-size: 1rem;
 }
