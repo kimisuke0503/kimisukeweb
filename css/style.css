@@ -1,0 +1,57 @@
+@charset "UTF-8"
+
+/* ------共通部分------ */
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+/* ------ヘッダー------ */
+.head-bg {
+    background-image: url(../images/headbg.JPG);
+    background-size: cover;
+    height: 300px;
+}
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper {
+    max-width: ;
+    margin: 0 auto;
+    padding: 0 150px;
+}
+.logo {
+    margin-top: 40px;
+    word-break: break-all;
+}
+.logo a {
+    color: #432;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 50px;
+    list-style: none;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a {
+    color: #432;
+}
+.main-nav a:hover {
+    color: #fff;
+}
