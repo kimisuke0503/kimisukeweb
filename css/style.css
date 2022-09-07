@@ -21,28 +21,28 @@ a {
     background-image: url(../images/headbg.JPG);
     background-position: center;
     background-size: cover;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
     display: flex;
     justify-content: space-between;
 }
 .wrapper {
-    max-width: ;
     margin: 0 auto;
-    padding: 0 10%;
+    padding: 0 12%;
 }
 .logo {
-    color: #432;
-    margin-top: 40px;
+    margin-top: 30px;
     word-break: break-all;
 }
 .logo a {
+    font-size: 1.2rem;
     color: #432;
 }
-
 .main-nav {
     display: flex;
     font-size: 1rem;
     text-transform: uppercase;
-    margin-top: 50px;
+    margin-top: 40px;
     list-style: none;
 }
 .main-nav li {
@@ -55,17 +55,25 @@ a {
     color: #fff;
 }
 
+.btn-menu {
+    display: none; /* 大きい画面の時は非表示 */
+}
+.sub-nav {
+    display: none; /* 大きい画面の時は非表示 */
+}
 
 /* ------自己紹介記事------ */
 article {
     text-align: center;
 }
 #kimisukeimg {
+    /* kimisukeの写真の位置 */
     position: absolute;
     top: 35%;
     left: 50%;
     -webkit-transform: translateX(-50%);
     z-index: 3;
+    /* kimisukeの写真の位置 */
 
     width: 20vh;
     height: auto;
@@ -73,31 +81,37 @@ article {
     box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
 }
 .profile {
-    height: 1500px;
+    height: 1200px;
+    width: 90%;
 
+    /* 自己紹介ページの位置 */
     position: absolute;
     top: 40%;
     left: 50%;
     -webkit-transform: translateX(-50%);
     z-index: 2;
+    /* 自己紹介ページの位置 */
 
     background-color: #fff;
     box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
-    width: 90%;
     margin: 0px auto 0;
     border-radius: 10px;
     text-align: center;
-    padding-top: 130px;    
+    padding-top: 120px;    
 }
-.profile h1 {
+.introduction h1 {
     color: brown;
     font-family: "M PLUS Rounded 1c";
-    font-size: 40px;
+    font-size: 3rem;
 }
 
-.profile h2 {
+.introduction h2 {
     font-family: "M PLUS Rounded 1c";
     font-size: 20px;
+}
+
+.introduction p {
+    padding: 0 5%;
 }
 
 .sns-icon {
@@ -113,7 +127,7 @@ article {
     
     border-radius: 50%;
     margin: 0 7px;
-    
+
     display: flex;
     justify-content: center; /*左右中心化*/
     align-items: center; /*上下中心化*/
@@ -133,23 +147,22 @@ article {
     background-color: aqua;
 }
 
-/* history */
-.history {
-    margin-top: 50px;
-}
-
-.history h3 {
+/* history以下共通部分 */
+.profile-title {
     font-size: 2rem;
     font-weight: normal;
+    margin: 25px 0 10px;
 }
 
+/* history */
 .history li {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 550px;
     margin: 0 auto 2%;
-    padding: 0 2% 1%;
+    padding: 0 2% 0.5%;
+    width: 90%;
     border-bottom: 1px #ddd solid;
 }
 
@@ -160,18 +173,132 @@ article {
 
 /* フッター */
 footer {
-    margin-top: 2000px;
+    margin-top: 1180px;
     width: 100%;
-    padding: 26px;
+    padding: 0 5%;
 }
 
 footer div {
     display: flex;
     justify-content: space-between;
-    margin: 0 10% 0;
+    margin: 0 3% 5%;
 }
 
 footer p {
     word-break: break-all;
     font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    /* ------ヘッダー------ */
+    .bg-nav {
+        display: none; /* メニューバーを非表示 */
+    }
+    .wrapper {
+        margin: 0 auto;
+        padding: 0 5%;
+    }
+
+    /* ハンバーガーを表示 */
+    .btn-menu {
+        display: inline;
+        height: 10%;
+        margin-top: 35px;
+
+        background-color: transparent;
+        border-color: transparent;
+        z-index: 10;
+    }
+    .btn-menu span {
+        width: 1.5rem;
+        height: 2px;
+        background-color: #432;
+        position: relative;
+        transition: ease .4s; /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+        display: block;
+    }
+    .btn-menu span:nth-child(1) {
+        top: 0;
+    }
+    
+    .btn-menu span:nth-child(2) {
+        margin: 5px 0;
+    }
+    
+    .btn-menu span:nth-child(3) {
+        top: 0;
+    }
+
+    /* ボタンがクリックされた後の処理(active) */
+    .btn-menu.active span:nth-child(1) {
+        top: 5px;
+        transform: rotate(45deg);
+    }
+
+    .btn-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .btn-menu.active span:nth-child(3) {
+        top: -9px;
+        transform: rotate(-45deg);
+    }
+
+    /* サブメニュー(mediaが600px以下だと、存在はしているがwidth0によって見えてはいない) */
+    .sub-nav {
+        display: inline;
+        position: absolute;
+        z-index: 6;
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 100vh;
+        transform: translateX(100%); 
+        background-color: #fff; /*ハンバーガーメニュークリック時のナビゲーションメニュー背景色*/
+        transition: ease 0.4s; /*ハンバーガーメニュークリック時のナビゲーションメニュー出現を遅延*/
+    }
+
+    .sub-nav-contents {
+        text-transform: uppercase;
+        margin: 80px 0 60px;
+        list-style: none;
+    }
+    .sub-nav-contents li {
+        border-bottom: 1px #ddd solid;
+    }
+    .sub-nav-contents a {
+        color: #432;
+        padding: 10px;
+        display: block;
+    }
+
+    .sub-nav-contents a:hover {
+        background-color: #ddd;
+    }
+
+    /* ボタンがクリックされた後の処理(active) */
+    .sub-nav.active {
+        width: 80%;
+        transform: translateX(0);
+        
+        cursor: pointer;
+    }
+
+    /* ボタンがクリックされたとき画面を暗くする */
+    .back-cover {
+        display: none;
+    }
+    .back-cover.active{
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background: rgba(3,3,3,.5);
+    }
+    
+
+
+    
 }

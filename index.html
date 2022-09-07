@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Kimisuke Web</title>
     <meta name="description" content="猫と映画が好きなkimisukeの練習用個人サイト">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
 
 <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
@@ -15,34 +16,48 @@
 <body>
     <header class="page-header wrapper">
         <h2 class="logo"><a href="index.html">Kimisuke Web</a></h2>
-        <nav>
+        <nav class="bg-nav">
             <ul class="main-nav">
                 <li><a href="index.html">Profile</a></li>
                 <li><a href="note.html">Note</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav> <!-- #bg-media -->
+        <nav class="sub-nav" id="js-menu">
+            <ul class="sub-nav-contents">
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="note.html">Note</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
+        <button class="btn-menu" id="js-btn-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button> <!-- .btn-menu -->
+        <div class="back-cover" id="js-back-cover"></div>
     </header> <!-- ヘッダー -->
     <article>
         <img id="kimisukeimg" src="images/favicon.png" alt="favicon">
-        <div class="profile">
-            <h1>Kimisuke</h1>
-            <h2>lazy graduate student</h2>
-            <div class="sns-icon">
-                <a href="https://www.instagram.com/hondana_moriken/">
-                    <img src="images/insta-icon.png" alt="Instagram">
-                </a>
-                <a href="https://twitter.com/Yrkk17">
-                    <img src="images/twitter-icon.png" alt="Twitter">
-                </a>
-                <a href="https://github.com/kimisuke0503">
-                    <img src="images/github-icon.png" alt="GitHub">
-                </a>
-            </div> <!-- sns-icon -->
-            <p>どうも、kimisukeです。大学院で暇を持て余しております。猫と映画と伊坂幸太郎が好きです。<br>まだまだ将来設計は定まっていませんが、web制作系の練習やらノートやらをまとめるサイトを作ってみました。<br>アイコンの猫は実家で飼っている性格の悪い愛猫です。</p>
+        <main class="profile">
+            <div class="introduction">
+                <h1>Kimisuke</h1>
+                <h2>lazy graduate student</h2>
+                <div class="sns-icon">
+                    <a href="https://www.instagram.com/hondana_moriken/">
+                        <img src="images/insta-icon.png" alt="Instagram">
+                    </a>
+                    <a href="https://twitter.com/Yrkk17">
+                        <img src="images/twitter-icon.png" alt="Twitter">
+                    </a>
+                    <a href="https://github.com/kimisuke0503">
+                        <img src="images/github-icon.png" alt="GitHub">
+                    </a>
+                </div> <!-- sns-icon -->
+                <p>kimisukeです。大学院で暇を持て余しております。猫と映画と伊坂幸太郎が好きです。<br>web制作系ノートとか趣味のこととかをまとめるサイトを作ってみました。<br>アイコンの猫は実家で飼っている性格の悪い愛猫です。</p>
+            </div>
             <div class="history">
-                <h3>history</h3>
+                <h3 class="profile-title">history</h3>
                 <ul>
                     <li class="history-content">
                         <div>
@@ -70,7 +85,19 @@
                     </li>
                 </ul>
             </div> <!-- history -->
-        </div> <!-- profile -->
+            <div class="interest">
+                <h3 class="profile-title">interest</h3>
+                <p>Javascript/Typescript/React/猫/伊坂幸太郎/映画/就活</p>
+            </div>
+            <div class="akademic-paper">
+                <h3 class="profile-title">Academic Paper</h3>
+                <p>coming soon...</p>
+            </div>
+            <div class="certification">
+                <h3 class="profile-title">Certifications</h3>
+                <p>基本情報技術者</p>
+            </div>
+        </main> <!-- profile -->
     </article> <!-- airticle -->
     <footer>
         <div>
@@ -78,5 +105,6 @@
             <p>&copy; 2022 Kimisuke</p>
         </div>
     </footer>
+    <script type="text/javascript" src="js/move.js"></script>
 </body>
 </html>
