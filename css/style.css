@@ -254,7 +254,7 @@ footer p {
         display: inline;
         position: absolute;
         z-index: 6;
-        right: 0;
+        right: -120%;
         top: 0;
         width: 0;
         height: 100vh;
@@ -301,8 +301,4 @@ footer p {
         z-index: 5;
         background: rgba(3,3,3,.5);
     }
-    
-
-
-    
 }
