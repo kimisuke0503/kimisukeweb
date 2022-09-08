@@ -1,3 +1,3 @@
 # kimisukeweb
 
-HTML&CSSで個人サイトを作ってます。
+HTML&CSS&Javascriptで個人サイトを作ってます。
