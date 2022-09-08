@@ -83,39 +83,32 @@ main {
     border-radius: 50%;
     box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
 }
-.profile {
+article {
     height: auto;
     width: 90%;
-
-    /* 自己紹介ページの位置 */
-    /* position: absolute; */
-    /* top: 300px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    z-index: 2; */
-    /* 自己紹介ページの位置 */
 
     background-color: #fff;
     box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
     margin: -45px auto 20px;
     border-radius: 10px;
     text-align: center;
-    padding: 120px 0 10px;    
+    padding: 20px 0;    
 }
-.introduction h1 {
+
+article h1{
     color: brown;
-    font-family: "M PLUS Rounded 1c";
+    font-family: "M PLUS Rounded 1c", sans-serif;
     font-size: 3rem;
-    margin-top: 5px;
+    font-weight: 900;
+}
+
+.introduction h1 {
+    margin-top: 105px;
 }
 
 .introduction h2 {
-    font-family: "M PLUS Rounded 1c";
-    font-size: 20px;
-}
-
-.introduction p {
-    padding: 0 5%;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 1.5rem;
 }
 
 .sns-icon {
@@ -154,11 +147,12 @@ main {
 /* history以下共通部分 */
 .profile p {
     margin-bottom: 20px;
+    padding: 0 5%;
 }
 .profile-title {
     font-size: 2rem;
     font-weight: normal;
-    margin: 0px 0 10px;
+    margin-top: 80px;
 }
 
 /* history */
@@ -175,8 +169,6 @@ main {
 .history-content .description {
     flex: auto;
 }
-
-
 
 /* フッター */
 footer {
