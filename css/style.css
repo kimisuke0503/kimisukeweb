@@ -146,16 +146,19 @@ article h1{
 
 /* history以下共通部分 */
 .profile p {
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     padding: 0 5%;
 }
 .profile-title {
     font-size: 2rem;
     font-weight: normal;
-    margin-top: 80px;
+    margin-top: 
 }
 
 /* history */
+.history ul {
+    margin-bottom: 80px;
+}
 .history li {
     display: flex;
     align-items: center;
@@ -168,6 +171,11 @@ article h1{
 }
 .history-content .description {
     flex: auto;
+}
+.interest p,
+.akademic-paper p,
+.certification p {
+    padding: 0 5%;
 }
 
 /* フッター */
