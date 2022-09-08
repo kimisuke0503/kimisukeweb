@@ -8,6 +8,9 @@ body {
     font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
     line-height: 1.7;
     color: #432;
+
+    display: flex;
+    flex-direction: column;
 }
 a {
     text-decoration: none;
@@ -16,7 +19,7 @@ a {
 
 /* ------ヘッダー------ */
 .page-header {
-    position: relative;
+    width: 100%;
     height: 350px;
     background-image: url(../images/headbg.JPG);
     background-position: center;
@@ -63,7 +66,7 @@ a {
 }
 
 /* ------自己紹介記事------ */
-article {
+main {
     text-align: center;
 }
 #kimisukeimg {
@@ -72,7 +75,7 @@ article {
     top: 260px;
     left: 50%;
     -webkit-transform: translateX(-50%);
-    z-index: 3;
+
     /* kimisukeの写真の位置 */
 
     width: 170px;
@@ -85,19 +88,19 @@ article {
     width: 90%;
 
     /* 自己紹介ページの位置 */
-    position: absolute;
-    top: 300px;
+    /* position: absolute; */
+    /* top: 300px;
     left: 50%;
     -webkit-transform: translateX(-50%);
-    z-index: 2;
+    z-index: 2; */
     /* 自己紹介ページの位置 */
 
     background-color: #fff;
     box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
-    margin: 0px auto 0;
+    margin: -45px auto 20px;
     border-radius: 10px;
     text-align: center;
-    padding-top: 120px;    
+    padding: 120px 0 10px;    
 }
 .introduction h1 {
     color: brown;
@@ -149,10 +152,13 @@ article {
 }
 
 /* history以下共通部分 */
+.profile p {
+    margin-bottom: 20px;
+}
 .profile-title {
     font-size: 2rem;
     font-weight: normal;
-    margin: 25px 0 10px;
+    margin: 0px 0 10px;
 }
 
 /* history */
@@ -166,19 +172,16 @@ article {
     width: 95%;
     border-bottom: 1px #ddd solid;
 }
-
 .history-content .description {
     flex: auto;
 }
 
-.certification {
-    margin-bottom: 20px;
-}
 
 
 /* フッター */
 footer {
-    margin-top: 1180px;
+    margin-top: auto;
+
     width: 100%;
     padding: 0 5%;
 }
