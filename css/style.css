@@ -194,7 +194,7 @@ footer p {
     font-size: 1rem;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 600px) {
     /* ------ヘッダー------ */
     .bg-nav {
         display: none; /* メニューバーを非表示 */
