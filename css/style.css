@@ -103,6 +103,7 @@ article {
     color: brown;
     font-family: "M PLUS Rounded 1c";
     font-size: 3rem;
+    margin-top: 5px;
 }
 
 .introduction h2 {
@@ -280,8 +281,7 @@ footer p {
     .sub-nav.active {
         width: 80%;
         transform: translateX(0);
-        
-        cursor: pointer;
+        box-shadow: 15px rgba(0,0,0,0.5);
     }
 
     /* ボタンがクリックされたとき画面を暗くする */
