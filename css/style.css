@@ -16,7 +16,7 @@ a {
     text-decoration: none;
 }
 
-
+/* --------------------index.html-------------------- */
 /* ------ヘッダー------ */
 .page-header {
     width: 100%;
@@ -44,24 +44,6 @@ a {
     position: relative;
     display: inline-block;
 }
-
-/* ロゴを押したらブワッてなる動き */
-.logo a::before{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 10%;
-    content: "";
-    background: rgba(0,0,0,0.3);
-    transform-origin: center center;
-    transform: scale(0, 0.5);
-    transition: transform .1s;
-}
-.logo a.active::before {
-    transform: scale(1, 1);
-} /* ロゴを押したらブワッてなる動き */
 
 .main-nav {
     display: flex;
@@ -107,7 +89,7 @@ main {
 }
 article {
     height: auto;
-    width: 90%;
+    width: 95%;
 
     background-color: #fff;
     box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
@@ -211,7 +193,7 @@ footer {
 footer div {
     display: flex;
     justify-content: space-between;
-    margin: 0 3% 5%;
+    margin: 2% 3% 2%;
 }
 
 footer p {
@@ -244,12 +226,8 @@ footer p {
         height: 10%;
         width: 8%;
 
-        border-radius: 50%;
         border-color: transparent;
-        z-index: 99;
-    }
-    .btn-menu:hover {
-        background-color: #ddd;
+        z-index: 10;
     }
 
     .btn-menu span {
@@ -327,3 +305,43 @@ footer p {
 
     /* ボタンがクリックされたとき画面を暗くする・メニュー外クリックでメニューを閉じる */
 }
+/* --------------------index.html-------------------- */
+
+/* --------------------blog.html-------------------- */
+.grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
+    margin: 4% 0 4%;
+}
+.item {
+    display: flex;
+    justify-content: center; /*左右中心化*/
+    align-items: center; /*上下中心化*/
+}
+.item a{
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    border-radius: 5%;
+    padding: 5%;
+    transition: all 0.2s;
+}
+.item a:hover {
+    box-shadow: 0px 7px 13px 5px rgba(0,0,0,0.3);
+}
+.item p {
+    color: #432;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 1.3rem;
+}
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-content {
+    text-align: left;
+    padding: 5%;
+}
+/* --------------------blog.html-------------------- */
