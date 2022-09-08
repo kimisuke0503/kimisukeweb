@@ -108,7 +108,7 @@ article h1{
 
 .introduction h2 {
     font-family: "M PLUS Rounded 1c", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .sns-icon {
@@ -185,7 +185,6 @@ footer div {
 }
 
 footer p {
-    word-break: break-all;
     font-size: 1rem;
 }
 
