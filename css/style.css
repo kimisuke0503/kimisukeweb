@@ -344,9 +344,7 @@ footer p {
     text-align: left;
     padding: 5%;
 }
-@media (max-width: 600px) {
-    .blog-content h1 {
-        font-size: 2rem;
-    }
+.blog-content h1 {
+    font-size: 2rem;
 }
 /* --------------------blog.html-------------------- */
