@@ -86,7 +86,7 @@ article {
 
     /* 自己紹介ページの位置 */
     position: absolute;
-    top: 40%;
+    top: 300px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     z-index: 2;
