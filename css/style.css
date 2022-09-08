@@ -40,7 +40,29 @@ a {
 .logo a {
     font-size: 1.2rem;
     color: #432;
+
+    position: relative;
+    display: inline-block;
 }
+
+/* ロゴを押したらブワッてなる動き */
+.logo a::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10%;
+    content: "";
+    background: rgba(0,0,0,0.3);
+    transform-origin: center center;
+    transform: scale(0, 0.5);
+    transition: transform .1s;
+}
+.logo a.active::before {
+    transform: scale(1, 1);
+} /* ロゴを押したらブワッてなる動き */
+
 .main-nav {
     display: flex;
     font-size: 1rem;
@@ -96,7 +118,7 @@ article {
 }
 
 article h1{
-    color: brown;
+    color: #b07f72;
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-size: 3rem;
     font-weight: 900;
@@ -217,13 +239,19 @@ footer p {
     /* ハンバーガーを表示 */
     .btn-menu {
         display: inline;
-        height: 10%;
+        
         margin-top: 35px;
+        height: 10%;
+        width: 8%;
 
-        background-color: transparent;
+        border-radius: 50%;
         border-color: transparent;
-        z-index: 10;
+        z-index: 99;
     }
+    .btn-menu:hover {
+        background-color: #ddd;
+    }
+
     .btn-menu span {
         width: 1.5rem;
         height: 2px;
@@ -234,14 +262,16 @@ footer p {
     }
     .btn-menu span:nth-child(1) {
         top: 0;
+        margin: 0 6px;
     }
     
     .btn-menu span:nth-child(2) {
-        margin: 5px 0;
+        margin: 5px 6px;
     }
     
     .btn-menu span:nth-child(3) {
         top: 0;
+        margin: 0 6px;
     }
 
     /* ボタンがクリックされた後の処理(active) */
@@ -295,17 +325,5 @@ footer p {
         background-color: #ddd;
     }
 
-    /* ボタンがクリックされたとき画面を暗くする */
-    .back-cover {
-        display: none;
-    }
-    .back-cover.active{
-        display: block;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 5;
-        background: rgba(3,3,3,.5);
-    }
+    /* ボタンがクリックされたとき画面を暗くする・メニュー外クリックでメニューを閉じる */
 }
