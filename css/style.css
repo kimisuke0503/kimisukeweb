@@ -204,6 +204,14 @@ footer p {
         padding: 0 5%;
     }
 
+    .profile {
+        width: 95%;
+    }
+    .interest p,
+    .akademic-paper p,
+    .certification p {
+        padding: 5px;
+    }
     /* ハンバーガーを表示 */
     .btn-menu {
         display: inline;
@@ -249,20 +257,17 @@ footer p {
         transform: rotate(-45deg);
     }
 
-    /* サブメニュー(mediaが600px以下だと、存在はしているがwidth0によって見えてはいない) */
+    /* サブメニュー*/
     .sub-nav {
         display: inline;
-        /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
         position: fixed;
         z-index: 9;
-        /*ナビのスタート位置と形状*/
         top: 0;
         right: -120%;
         width: 80%;
-        height: 100vh;/*ナビの高さ*/
+        height: 100vh;
         background: rgba(255,255,255,.9);
         box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
-        /*動き*/
         transition: ease 0.4s;
     }
     /* ボタンがクリックされた後の処理(active) */
