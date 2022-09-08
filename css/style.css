@@ -252,15 +252,22 @@ footer p {
     /* サブメニュー(mediaが600px以下だと、存在はしているがwidth0によって見えてはいない) */
     .sub-nav {
         display: inline;
-        position: absolute;
-        z-index: 6;
-        right: -120%;
+        /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+        position: fixed;
+        z-index: 9;
+        /*ナビのスタート位置と形状*/
         top: 0;
-        width: 0;
-        height: 100vh;
-        transform: translateX(100%); 
-        background-color: #fff; /*ハンバーガーメニュークリック時のナビゲーションメニュー背景色*/
-        transition: ease 0.4s; /*ハンバーガーメニュークリック時のナビゲーションメニュー出現を遅延*/
+        right: -120%;
+        width: 80%;
+        height: 100vh;/*ナビの高さ*/
+        background: rgba(255,255,255,.9);
+        box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
+        /*動き*/
+        transition: ease 0.4s;
+    }
+    /* ボタンがクリックされた後の処理(active) */
+    .sub-nav.active {
+        right: 0;
     }
 
     .sub-nav-contents {
@@ -279,13 +286,6 @@ footer p {
 
     .sub-nav-contents a:hover {
         background-color: #ddd;
-    }
-
-    /* ボタンがクリックされた後の処理(active) */
-    .sub-nav.active {
-        width: 80%;
-        transform: translateX(0);
-        box-shadow: 15px rgba(0,0,0,0.5);
     }
 
     /* ボタンがクリックされたとき画面を暗くする */
