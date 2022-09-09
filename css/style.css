@@ -311,7 +311,7 @@ footer p {
 .grid {
     display: grid;
     gap: 26px;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 600px));
     margin: 4% 0 4%;
 }
 .item {
