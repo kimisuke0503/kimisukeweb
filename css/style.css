@@ -343,8 +343,32 @@ footer p {
 .blog-content {
     text-align: left;
     padding: 5%;
+    font-family: "M PLUS Rounded 1c", sans-serif
+}
+.blog-content a {
+    text-decoration: underline;
 }
 .blog-content h1 {
     font-size: 2rem;
+    margin-bottom: 15px;
+}
+.blog-content h2 {
+    margin-bottom: 10px;
+}
+.blog-content h3 {
+    font-size: large;
+    font-weight: bold;
+}
+.blog-content p {
+    margin-bottom: 20px;
+}
+.blog-content ul,
+.blog-content ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.img-20220908 {
+    width: 100%;
+    height: auto;
 }
 /* --------------------blog.html-------------------- */
