@@ -218,35 +218,37 @@ footer p {
     .certification p {
         padding: 5px;
     }
-    /* ハンバーガーを表示 */
+
+    /* ハンバーガーここから */
     .btn-menu {
-        display: inline;
+        display: inline; /* ハンバーガーを表示 */
         
         margin-top: 35px;
         height: 10%;
         width: 8%;
 
         border-color: transparent;
-        z-index: 10;
+        z-index: 10; /* メニューが出てきた時最前面に出るように */
     }
 
     .btn-menu span {
-        width: 1.5rem;
-        height: 2px;
-        background-color: #432;
-        position: relative;
-        transition: ease .4s; /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
-        display: block;
+        width: 1.5rem; /* 線の横幅 */
+        height: 2px; /* 線の太さ */
+        background-color: #432; /* 線の色 */
+
+        position: relative; /* これから相対位置を指定しますよって合図 */
+        display: block; /* spanをブロック要素に変換 */
+
+        transition: ease .4s; /* ハンバーガーメニュークリック時の三本線の動きを遅延 */
     }
+    /* 3本線の調整 */
     .btn-menu span:nth-child(1) {
         top: 0;
         margin: 0 6px;
     }
-    
     .btn-menu span:nth-child(2) {
         margin: 5px 6px;
     }
-    
     .btn-menu span:nth-child(3) {
         top: 0;
         margin: 0 6px;
@@ -254,12 +256,12 @@ footer p {
 
     /* ボタンがクリックされた後の処理(active) */
     .btn-menu.active span:nth-child(1) {
-        top: 5px;
-        transform: rotate(45deg);
+        top: 5px; /* ×にするために線の左端を下げる */
+        transform: rotate(45deg); /* 線の左端から見て右45度になるよう回す */
     }
 
     .btn-menu.active span:nth-child(2) {
-        opacity: 0;
+        opacity: 0; /* 真ん中の線を消す(透明にする) */
     }
 
     .btn-menu.active span:nth-child(3) {
@@ -269,20 +271,21 @@ footer p {
 
     /* サブメニュー*/
     .sub-nav {
-        display: inline;
-        position: fixed;
-        z-index: 9;
+        display: inline; /* サブメニューを表示 */
+        z-index: 9; /* ハンバーガーボタンより背面になるよう指定 */
+
+        position: fixed; /* 位置を固定 */
         top: 0;
-        right: -120%;
-        width: 80%;
-        height: 100vh;
+        right: -120%; /* ボタンが押されるまで隠す(position: fixed;との連携) */
+        width: 80%; /* 出てくるメニューの幅を調整 */
+        height: 100vh; /* 縦の長さは画面一杯に */
         background: rgba(255,255,255,.9);
         box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
-        transition: ease 0.4s;
+        transition: ease 0.4s; /* ハンバーガーメニュークリック時のメニューの動きを遅延 */
     }
     /* ボタンがクリックされた後の処理(active) */
     .sub-nav.active {
-        right: 0;
+        right: 0; /* ボタンが押されると位置を変えて出てくるようにする */
     }
 
     .sub-nav-contents {
@@ -307,11 +310,11 @@ footer p {
 }
 /* --------------------index.html-------------------- */
 
-/* --------------------blog.html-------------------- */
+/* --------------------blog/note.html-------------------- */
 .grid {
     display: grid;
     gap: 26px;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 600px));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     margin: 4% 0 4%;
 }
 .item {
@@ -338,37 +341,52 @@ footer p {
 .item img {
     width: 100%;
     height: auto;
-}
+}/* --------------------blog.html-------------------- */
 
-.blog-content {
+/* --------------------各種コンテンツたち-------------------- */
+.blog-note-content {
     text-align: left;
     padding: 5%;
     font-family: "M PLUS Rounded 1c", sans-serif
 }
-.blog-content a {
+.blog-note-content a {
     text-decoration: underline;
 }
-.blog-content h1 {
+.blog-note-content h1 {
     font-size: 2rem;
     margin-bottom: 15px;
 }
-.blog-content h2 {
+.blog-note-content h2 {
     margin-bottom: 10px;
 }
-.blog-content h3 {
+.blog-note-content h3 {
     font-size: large;
     font-weight: bold;
 }
-.blog-content p {
+.blog-note-content p {
     margin-bottom: 20px;
 }
-.blog-content ul,
-.blog-content ol {
+.blog-note-content ul,
+.blog-note-content ol {
     margin-left: 30px;
     margin-bottom: 20px;
 }
+/* 画像たち */
+/* blog_2022/09/08 */
 .img-20220908 {
     width: 100%;
     height: auto;
 }
-/* --------------------blog.html-------------------- */
+
+/* note_2022/09/10 */
+.img-20220910-wrapper {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, minmax(10vh, 40vh));
+}
+.img-20220910-wrapper img {
+    width: 100;
+    height: auto;
+    margin-bottom: 20px;
+}
+/* --------------------各種コンテンツたち-------------------- */

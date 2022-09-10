@@ -53,23 +53,17 @@
         </button> <!-- .btn-menu -->
     </header> <!-- ヘッダー -->
     <main>
-        <article class="note">
-            <h1>Note</h1>
-            <div class="wrapper grid">
-                <div class="item">
-                    <a href="note_function/note_function.html">
-                        <p>機能追加ノート<br>2022/09/10更新</p>
-                        <img src="../images/note/addfunction.png" alt="pc使う人">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="note_css.html">
-                        <p>CSSのメモ<br>2022/09/10更新</p>
-                        <img id="img-css" src="../images/note/css.png" alt="pc使う人">
-                    </a>
-                </div>
-                
-            </div>
+        <article class="blog-note-content">
+            <h1>CSSのメモ</h1>
+            <h2>擬似クラス</h2>
+            <p>クラス付与してないけどクラスっぽく書けるから擬似クラス</p>
+            <h3>nth-child</h3>
+            <p>&lt;li&gt;など連続するタグに対して、&lt;ul&gt;など親要素から見た順番や奇数偶数番目などを指定できる。</p>
+            <div>例 : CSS</div>
+            <pre class="prettyprint">
+ul li:nth-child("数値"or"2n"or"2n+1"or"odd"or"even"or...) {
+    background-color: ---;
+}</pre>
         </article> <!-- note -->
     </main> <!-- main -->
     <footer>
@@ -81,6 +75,7 @@
             </p>
         </div>
     </footer>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sunburst"></script>
     <script type="text/javascript" src="../js/move.js"></script>
 </body>
 </html>
