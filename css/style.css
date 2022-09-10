@@ -76,9 +76,8 @@ main {
 #kimisukeimg {
     /* kimisukeの写真の位置 */
     position: absolute;
-    top: 260px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
+    top: 340px;
+    transform: translate(-50%, -50%);
 
     /* kimisukeの写真の位置 */
 

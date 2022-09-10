@@ -55,6 +55,16 @@
     <main>
         <article class="blog-note-content">
             <h1>CSSのメモ</h1>
+            <h2>プロパティ</h2>
+            <h3>position</h3>
+            <p>ボックスの左上点から見た位置を指定する。値によって起点が変わる。</p>
+            <ul>
+                <li>static : デフォルト。HTMLのまんまの位置。</li>
+                <li>relative : top、right、left、rightで相対的な位置を指定できる。本来配置される場所を起点としてどれだけ離れているかを指定できる。</li>
+                <li>absolute : top、right、left、rightで絶対的な位置を指定できる。今いる場所に関わらず、ページ全体を起点としてどれだけ離れているかを指定できる。</li>
+                <li>fixed : top、right、left、rightで絶対的な位置を指定できる。ページではなく画面全体に表示されている領域を起点として配置できる。(マイナスの値を入れれば画面外に配置することも可能)
+                </li>
+            </ul>
             <h2>擬似クラス</h2>
             <p>クラス付与してないけどクラスっぽく書けるから擬似クラス</p>
             <h3>nth-child</h3>
@@ -71,7 +81,6 @@ ul li:nth-child("数値"or"2n"or"2n+1"or"odd"or"even"or...) {
             <p>Kimisuke Web</p>
             <p>
                 &copy; 2022, Kimisuke<br>
-                &emsp;&ensp;icon by <a target="_blank" href="https://icons8.com">Icons8</a>
             </p>
         </div>
     </footer>
