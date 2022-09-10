@@ -70,10 +70,8 @@
             </ul>
             <h2>実装</h2>
             <p>実装方法とソースコードを載せておきます。(必要そうなところだけ抜き出してます)</p>
-            <ol>
-                <li>
-                    htmlにメニューとハンバーガーのもとになる部分を書く。
-                    <pre class="prettyprint">
+            <p>1. htmlにメニューとハンバーガーのもとになる部分を書く。</p>
+                <pre class="prettyprint">
 &lt;!-- ハンバーガーの時のサブメニュー --&gt;
 &lt;nav class=&quot;sub-nav&quot; id=&quot;js-menu&quot;&gt;
     &lt;ul class=&quot;sub-nav-contents&quot;&gt;
@@ -87,12 +85,10 @@
     &lt;span&gt;&lt;/span&gt;
     &lt;span&gt;&lt;/span&gt;
     &lt;span&gt;&lt;/span&gt;
-&lt;/button&gt;
-                    </pre>
-                </li>
-                <li>
-                    cssで装飾する。
-                    <pre class="prettyprint">
+&lt;/button&gt;</pre>
+
+                <p>2. cssで装飾する。</p>
+                <pre class="prettyprint">
 .sub-nav {
     display: none; /* 大きい画面の時は非表示 */
 }
@@ -183,24 +179,22 @@
     .sub-nav.active {
         right: 0; /* ボタンが押されると位置を変えて出てくるようにする */
     }
-}
-                    </pre>
-                </li>
-                <li>
-                    javascriptで動きのきっかけを操作する。
-                    <pre class="prettyprint">
+}</pre>
+
+            <p>3. javascriptで動きのきっかけを操作する。</p>
+            <pre class="prettyprint">
 const btnMenu = document.querySelector("#js-btn-menu");
 const nav = document.querySelector("#js-menu");
 
 btnMenu.addEventListener("click", function () {
     btnMenu.classList.toggle("active");
     nav.classList.toggle("active");
-});
-                    </pre>
-                    なんのこっちゃですが、やってることはdocument.querySelectorでidからタグを取得して、ハンバーガーがクリックorタップされたらclassList.toggleでハンバーガーボタンとサブメニューに"active"クラスを付与(toggleなので切り替えるって表現が正しいかも、もう一回クリックすると今度は"active"クラスが剥奪される)して、CSSで指定した装飾に0.4秒かけて変える。ということです🤔<br>
-                    要するにクリックorタップのきっかけでCSSの装飾が切り替わって、その過程をゆっくりにしてるのでアニメーションっぽくなっています。
-                </li>
-            </ol>
+});</pre>
+            <p>
+                なんのこっちゃですが、やってることはdocument.querySelectorでidからタグを取得して、ハンバーガーがクリックorタップされたらclassList.toggleでハンバーガーボタンとサブメニューに"active"クラスを付与(toggleなので切り替えるって表現が正しいかも、もう一回クリックすると今度は"active"クラスが剥奪される)して、CSSで指定した装飾に0.4秒かけて変える。ということです🤔<br>
+                要するにクリックorタップのきっかけでCSSの装飾が切り替わって、その過程をゆっくりにしてるのでアニメーションっぽくなっています。
+            </p>
+            
             <h2>感想</h2>
             <p>
                 最初サブメニューを位置だけ指定して横に待機させておくとスクロールで横に行けてしまって待機してるサブメニューが見れてしまう(テレビ番組に気の抜けたスタッフが映り込んでしまうみたいな)というダサいことになっていて、直すのに難航しましたが、position: fixed;とright: -120%;でなんか行けました。(多分位置を画面外に指定してそこに固定するっていうのがいいのかな？)<br>
