@@ -76,11 +76,10 @@ main {
 #kimisukeimg {
     /* kimisukeの写真の位置 */
     position: absolute;
-    top: 340px;
-    transform: translate(-50%, -50%);
+    top: 260px;
+    transform: translateX(-50%);
 
     /* kimisukeの写真の位置 */
-
     width: 170px;
     height: auto;
     border-radius: 50%;
@@ -356,14 +355,12 @@ footer p {
     margin-bottom: 15px;
 }
 .blog-note-content h2 {
+    margin-top: 40px;
     margin-bottom: 10px;
 }
 .blog-note-content h3 {
     font-size: large;
     font-weight: bold;
-}
-.blog-note-content p {
-    margin-bottom: 20px;
 }
 .blog-note-content ul,
 .blog-note-content ol {
