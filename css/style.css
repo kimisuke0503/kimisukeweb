@@ -32,14 +32,14 @@ a {
 .page-header {
     position: fixed;
     z-index: 9;
-    height: 100px;
+    height: 80px;
     width: 100%;
     border-radius: 0 0 10px 10px;
 
     display: flex;
     justify-content: space-between;
 
-    transition: all .3s;
+    transition: all .4s;
 }
 
 /* スクロールした時の動作 */
@@ -51,11 +51,8 @@ a {
     margin: 0 auto;
     padding: 0 12%;
 }
-.logo {
-    margin-top: 30px;
-    word-break: break-all;
-}
 .logo a {
+    margin-top: 35px;
     font-size: 1.2rem;
     color: #fff;
     position: relative;
@@ -70,7 +67,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
-    margin-top: 40px;
+    margin-top: 35px;
     list-style: none;
 
     font-size: 1rem;
