@@ -30,15 +30,17 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <div class="full-img"></div> <!-- 背景画像 -->
     <header class="page-header wrapper">
-        <h2 class="logo"><a href="../../index.html">Kimisuke Web</a></h2>
+        <h2 class="logo"><a id="js-logo" href="../../index.html">Kimisuke Web</a></h2>
         <nav class="bg-nav">
-            <ul class="main-nav">
+            <ul class="main-nav" id="js-main-nav">
                 <li><a href="../../index.html">Profile</a></li>
                 <li><a href="../note.html">Note</a></li>
                 <li><a href="../../blog/blog.html">Blog</a></li>
             </ul>
         </nav> <!-- .bg-nav -->
+        <!-- ハンバーガーの時のサブメニュー -->
         <nav class="sub-nav" id="js-menu">
             <ul class="sub-nav-contents">
                 <li><a href="../../index.html">Profile</a></li>
@@ -46,6 +48,7 @@
                 <li><a href="../../blog/blog.html">Blog</a></li>
             </ul>
         </nav>
+        <!-- ハンバーガーボタン -->
         <button class="btn-menu" id="js-btn-menu">
             <span></span>
             <span></span>
@@ -211,6 +214,7 @@ btnMenu.addEventListener("click", function () {
         </div>
     </footer>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> <!-- jQuery -->
     <script type="text/javascript" src="../../js/move.js"></script>
 </body>
 </html>
