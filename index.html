@@ -30,10 +30,11 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <div class="full-img"></div> <!-- 背景画像 -->
     <header class="page-header wrapper">
         <h2 class="logo"><a id="js-logo" href="index.html">Kimisuke Web</a></h2>
         <nav class="bg-nav">
-            <ul class="main-nav">
+            <ul class="main-nav" id="js-main-nav">
                 <li><a href="index.html">Profile</a></li>
                 <li><a href="note/note.html">Note</a></li>
                 <li><a href="blog/blog.html">Blog</a></li>
@@ -54,15 +55,6 @@
             <span></span>
         </button> <!-- .btn-menu -->
     </header> <!-- ヘッダー -->
-
-    <!-- <nav class="fixed-header">
-        <ul class="fixed-nav">
-            <li><a href="index.html">Profile</a></li>
-            <li><a href="note/note.html">Note</a></li>
-            <li><a href="blog/blog.html">Blog</a></li>
-        </ul>
-    </nav> .fixed-header -->
-
     <main>
         <img id="kimisukeimg" src="images/kimi.png" alt="kimi">
         <article class="profile">
@@ -134,6 +126,7 @@
             </p>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> <!-- jQuery -->
     <script type="text/javascript" src="js/move.js"></script>
 </body>
 </html>

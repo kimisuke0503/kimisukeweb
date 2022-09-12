@@ -15,19 +15,37 @@ body {
 a {
     text-decoration: none;
 }
+.full-img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 350px;
+
+    background-image: url(../images/headbg.JPG);
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
 
 /* --------------------index.html-------------------- */
 /* ------ヘッダー------ */
 .page-header {
+    position: fixed;
+    z-index: 9;
+    height: 100px;
     width: 100%;
-    height: 350px;
-    background-image: url(../images/headbg.JPG);
-    background-position: center;
-    background-size: cover;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 0 0 10px 10px;
 
     display: flex;
     justify-content: space-between;
+
+    transition: all .3s;
+}
+
+/* スクロールした時の動作 */
+.page-header.change-color {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 .wrapper {
     margin: 0 auto;
@@ -39,27 +57,42 @@ a {
 }
 .logo a {
     font-size: 1.2rem;
-    color: #432;
-
+    color: #fff;
     position: relative;
     display: inline-block;
 }
-
-.main-nav {
-    display: flex;
-    font-size: 1rem;
-    text-transform: uppercase;
-    margin-top: 40px;
-    list-style: none;
-}
-.main-nav li {
-    margin-left: 36px;
-}
-.main-nav a {
+/* スクロールした時の動作 */
+.logo a.change-color {
     color: #432;
 }
-.main-nav a:hover {
+
+.main-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-top: 40px;
+    list-style: none;
+
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.main-nav a {
+    width: 120%;
+    height: 120%;
     color: #fff;
+    border-radius: 7px;
+    
+    display: flex;
+    justify-content: center; /*左右中心化*/
+    align-items: center; /*上下中心化*/
+
+}
+.main-nav a:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+.main-nav a.change-color{
+    color: #432;
 }
 
 .btn-menu {
@@ -68,27 +101,6 @@ a {
 .sub-nav {
     display: none; /* 大きい画面の時は非表示 */
 }
-
-/* .fixed-header {
-    position: fixed;
-    background: #fff;
-
-    display: flex;
-
-    top: -80px;
-    width: 100%;
-    height: 80px;
-}
-
-.fixed-nav {
-    display: flex;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    list-style: none;
-
-    
-    padding: 30px 0  0 80%;
-} */
 
 /* ------自己紹介記事------ */
 main {
@@ -112,7 +124,7 @@ article {
 
     background-color: #fff;
     box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
-    margin: -45px auto 20px;
+    margin: 310px auto 20px;
     border-radius: 10px;
     text-align: center;
     padding: 20px 0;    
@@ -242,7 +254,7 @@ footer p {
     .btn-menu {
         display: inline; /* ハンバーガーを表示 */
         
-        margin-top: 35px;
+        margin-top: 47px;
         height: 10%;
         width: 8%;
 
@@ -253,12 +265,16 @@ footer p {
     .btn-menu span {
         width: 1.5rem; /* 線の横幅 */
         height: 2px; /* 線の太さ */
-        background-color: #432; /* 線の色 */
+        background-color: #fff; /* 線の色 */
 
         position: relative; /* これから相対位置を指定しますよって合図 */
         display: block; /* spanをブロック要素に変換 */
 
         transition: ease .4s; /* ハンバーガーメニュークリック時の三本線の動きを遅延 */
+    }
+    /* スクロールした時の動作 */
+    .btn-menu span.change-color {
+        background-color: #432; /* 線の色 */
     }
     /* 3本線の調整 */
     .btn-menu span:nth-child(1) {
@@ -272,8 +288,10 @@ footer p {
         top: 0;
         margin: 0 6px;
     }
-
     /* ボタンがクリックされた後の処理(active) */
+    .btn-menu.active span {
+        background-color: #432;
+    }
     .btn-menu.active span:nth-child(1) {
         top: 5px; /* ×にするために線の左端を下げる */
         transform: rotate(45deg); /* 線の左端から見て右45度になるよう回す */
