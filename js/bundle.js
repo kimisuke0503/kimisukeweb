@@ -14,54 +14,20 @@
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+/***/ (() => {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst saySomething_1 = __importDefault(__webpack_require__(/*! ./saySomething */ \"./src/saySomething.ts\"));\nconst root = document.getElementById(\"root\");\n// インスタンス化\nconst saySomething = new saySomething_1.default(\"俺たちは大きな目的のために生きているのではない。もっと小さな目的のために生きている。\");\nsaySomething.sayText(root);\n\n\n//# sourceURL=webpack://kimisukeweb/./src/index.ts?");
-
-/***/ }),
-
-/***/ "./src/saySomething.ts":
-/*!*****************************!*\
-  !*** ./src/saySomething.ts ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nclass SaySomething {\n    // コンストラクタ\n    constructor(message) {\n        this.message = message;\n    }\n    sayText(elem) {\n        if (elem) {\n            elem.innerText = this.message;\n        }\n    }\n}\nexports[\"default\"] = SaySomething;\n\n\n//# sourceURL=webpack://kimisukeweb/./src/saySomething.ts?");
+eval("\nconst btnMenu = document.getElementById(\"js-btn-menu\");\nconst subNav = document.getElementById(\"js-menu\");\nbtnMenu === null || btnMenu === void 0 ? void 0 : btnMenu.addEventListener(\"click\", () => {\n    // ?はオプショナルチェイニングで、nullでもエラーにならずundefindが帰ってくるようにする\n    btnMenu === null || btnMenu === void 0 ? void 0 : btnMenu.classList.toggle(\"active\");\n    subNav === null || subNav === void 0 ? void 0 : subNav.classList.toggle(\"active\");\n});\n\n\n//# sourceURL=webpack://kimisukeweb/./src/index.ts?");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/index.ts"]();
 /******/ 	
 /******/ })()
 ;

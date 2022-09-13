@@ -1,9 +1,8 @@
-import SaySomething from "./saySomething";
+const btnMenu: HTMLElement | null = document.getElementById("js-btn-menu");
+const subNav: HTMLElement | null = document.getElementById("js-menu");
 
-const root: HTMLElement | null = document.getElementById("root");
-
-// インスタンス化
-const saySomething = new SaySomething(
-  "俺たちは大きな目的のために生きているのではない。もっと小さな目的のために生きている。"
-);
-saySomething.sayText(root);
+btnMenu?.addEventListener("click", () => {
+  // ?はオプショナルチェイニングで、nullでもエラーにならずundefindが帰ってくるようにする
+  btnMenu?.classList.toggle("active");
+  subNav?.classList.toggle("active");
+});
