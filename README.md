@@ -1,3 +1,3 @@
 # kimisukeweb
 
-練習のためにHTML&CSS&Javascriptで個人サイトを作ってます。
+練習のためにHTML&CSS&Typescriptで個人サイトを作ってます。
