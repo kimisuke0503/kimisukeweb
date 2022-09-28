@@ -171,11 +171,6 @@ article h1{
     background-color: #ddd;
 }
 
-.button {
-    margin: auto;
-    background-color: aqua;
-}
-
 /* history以下共通部分 */
 .profile p {
     margin-bottom: 80px;
